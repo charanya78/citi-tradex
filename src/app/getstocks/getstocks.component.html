@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+    
+        <span class="sr-only" id="loading"></span>
+    
+</div>
+<div *ngIf="Stocklist.length !== 0">
+<div>
+  <label>Stock Ticker </label>
+  <select  [(ngModel)]="selected" (ngModelChange)="selectedChanged()" (change)=" loadStocks()" id="SelectedVariable" >
+    <option value="0">--All--</option>
+    <option *ngFor="let stock of Stocklist" value={{stock.symbol}}>
+      {{stock.symbol}}
+    </option>
+  </select>
+  <div *ngIf="priceDiv">
+  <p>Stock price as of is <b> {{this.price| number:'1.2-2'}} </b>
+</p></div>
+</div>
+<div *ngIf="div1">
+<p>
+<p>Upper Band: <b> {{this.upperBand| number:'1.2-2'}}</b></p>
+<p> Lower Band: <b>{{this.lowerBand| number:'1.2-2'}}</b></p>
+<p> Trade advice:<b style = "color:blue">{{this.advice}}</b></p>
+<br>
+</div>
+<button class="btn btn-outline-primary" (change)="putPrice()"(click)="getStockPrice()"  >Get price</button>
+<span><button class="btn btn-outline-primary" (click)="getTradeAdvice()"  >Get advice</button></span>
+<br>
+
+ Search stock list 
+ <br>
+ <br>
+ <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
+  </div>
+  <br>
+  <br>
+	<div class="col-md-12">
+	  <table class="table table-bordered" datatable class="row-border hover">
+		<thead>
+		  <tr>
+			<th scope="col">Symbol</th>
+			<th scope="col">Name</th>
+			<th scope="col">Country</th>
+            <th scope="col">Industry</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr *ngFor="let stock of Stocklist| filter:filterTerm">
+			<td>{{stock.symbol}}</td>
+			<td>{{stock.name}}</td>
+			<td>{{stock.country}}</td>
+            <td>{{stock.industry}}</td>
+			<td>
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</div>
+

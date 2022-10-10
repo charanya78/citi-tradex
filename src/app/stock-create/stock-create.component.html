@@ -1,0 +1,52 @@
+<!--<figure class="text-center">
+	<h2 href="#" class="link-success">Add Stock</h2>
+</figure> -->
+
+<button class="btn btn-outline-primary" routerLink="/stock-list">Trade Orders History</button> 
+<button class="btn btn-outline-primary" routerLink="/getallstocks">List all Stocks</button>
+
+
+<div class="col-md-12">   
+    <figure class="text-center">
+	    <h2 href="#" class="link-success">Buy Stock</h2>
+    </figure>
+    <div class="form-group row">
+      <label class="control-label col-md-12">Stock Ticker</label>
+      <input type="text" [(ngModel)]="StockDetails.stockTicker" class="form-control">
+    </div>            <!--Remove the comments if needed-->
+    
+    <div class="form-group row">
+      <label class="control-label col-md-12">Stock Name</label>
+      <input type="text" [(ngModel)]="StockDetails.stockName" class="form-control">
+    </div> 
+    
+    <div class="form-group row">
+      <label class="control-label col-md-12">Price</label>
+      <input type="text" [(ngModel)]="StockDetails.price" class="form-control">
+    </div>
+    <div class="form-group row">
+      <label class="control-label col-md-12">Volume</label>
+      <input type="text" [(ngModel)]="StockDetails.volume" class="form-control">
+    </div>
+    <div class="form-group row">
+      <label class="control-label col-md-12">Buy or sell</label>
+      <input type="text" [(ngModel)]="StockDetails.buyOrSell" class="form-control">
+    </div>
+    <!--> 
+    <div class="form-group row">
+      <label class="control-label col-md-12">Status Code</label>
+      <input type="text" [(ngModel)]="StockDetails.statusCodeCity" class="form-control">
+    </div>
+    <!--> 
+    <!--> 
+    <div class="form-group row">
+      <label class="control-label col-md-12"> Timestamp</label>
+      <input type="text" [(ngModel)]="StockDetails.date_Time" class="form-control">
+    </div>
+    <!-->
+    <br>
+    <br>
+    <div class="form-group">
+      <button class="btn btn-success btn-lg btn-block" (click)="addStock()">Add Stock</button>
+    </div>
+</div>

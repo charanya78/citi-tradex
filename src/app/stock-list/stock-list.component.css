@@ -1,0 +1,12 @@
+h3{
+    color: navy;
+}
+
+table { width: 100%; }
+
+td.negative{ color: red !important }
+td.positive{ color:rgb(120, 165, 41) !important }
+
+#form-group{
+color:red;
+}

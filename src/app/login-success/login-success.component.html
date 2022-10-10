@@ -1,0 +1,46 @@
+<html>
+  <head>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <br>
+<div class="card w-60">
+<div class="card-group">
+  <div class="card">
+    <img src="/assets/images/OIP.jpg" class="card-img-top" alt="..." height=240px>
+    <div class="card-body">
+      <h5 class="card-title">Buy a stock</h5>
+      <p class="card-text">Use this feature to place an order for your stock</p>
+      <a [routerLink]="['/create-stock/']" class="btn btn-primary btn-sm float-right">Buy stocks now</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/assets/images/list.png" class="card-img-top" alt="..." height=240px>
+    <div class="card-body">
+        <h5 class="card-title">View all trades</h5>
+        <p class="card-text">Use this feature to view historical trades done</p>
+        <a [routerLink]="['/stock-list']" class="btn btn-primary btn-sm float-right">View Your Orders</a>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<div class="card w-60">
+<div class="card-group">
+  <div class="card">
+    <img src="/assets/images/view-stocks.jpg" class="card-img-top" alt="..." height=240px>
+    <div class="card-body">
+      <h5 class="card-title">View all available stocks</h5>
+      <p class="card-text">Use this feature to view stocks with their prices</p>
+      <a [routerLink]="" class="btn btn-primary btn-sm float-right">stocks Available now</a>
+    </div>
+  </div> 
+ <div class="card">
+    <img src="/assets/images/db.jpg" class="card-img-top" alt="..." height=240px>
+    <div class="card-body">
+        <h5 class="card-title">Dashboard</h5>
+        <p class="card-text">Check the price and stock Trends</p>
+        <a [routerLink]= "['/dashboard']" class="btn btn-primary btn-sm float-right">Analytics Dashboard</a>
+    </div>
+  </div>
+</div>
+</div>

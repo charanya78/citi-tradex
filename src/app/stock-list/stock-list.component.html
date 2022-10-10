@@ -1,0 +1,72 @@
+<figure class="text-center">
+	<h2 href="#" class="link-success">Trade Transaction History</h2>
+</figure>
+
+
+
+<button class="btn btn-outline-primary" routerLink="/create-stock">Add Stock</button>
+&nbsp;<button class="btn btn-outline-primary" routerLink="/getallstocks">List all Stocks</button>
+<br>
+<br>
+
+<!-->><button class="btn btn-outline-primary" routerLink="/stock-edit/1">Edit Stock</button><!-->
+
+<!-- Stocks list table, it hides when there is no stock -->
+<br>  
+
+ <!--remove from line 16 - 57-->
+ <!--
+<head>
+<style>
+    .positive {
+    background-color: green;
+}
+
+.negative {
+    background-color: red;
+}
+	#test{ color: pink;}
+    </style>
+</head> -->
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
+  </div>
+  
+<div *ngIf="Stocks.length !== 0">
+	<div ng-app class="col-md-12">
+	  <table class="table table-bordered table-hover">
+		<thead>
+		  <tr>
+			<th scope="col">Id</th>
+			<th scope="col">Stock Ticker</th>
+			<th scope="col">Stock Name</th>
+			<th scope="col">Price</th>
+            <th scope="col">Volume</th>
+            <th scope="col">Buy or Sell</th>
+            <th scope="col">Status Code</th>
+            <th scope="col">Timestamp</th>
+			<th scope="col">Profit or Loss Percentage</th>
+			<!--<th scope="col">Profit or Loss Percentage</th> -->
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr *ngFor="let stock of Stocks | filter:filterTerm">
+			<td>{{stock.id}}</td>
+			<td>{{stock.stockTicker}}</td>
+			<td>{{stock.stockName}}</td>
+			<td>{{stock.price}}</td>
+            <td>{{stock.volume}}</td>
+            <td>{{stock.buyOrSell}}</td>
+            <td>{{stock.statusCodeCity}}</td>
+            <td>{{stock.date_Time}}</td>
+			
+			<td [ngClass] = "this.sum < 0 ? 'negative' : 'positive'" >
+ 						<div *ngIf="stock.id == this.x" > {{this.sum| number:'1.2-2'}}% 
+ 				</div> </td>
+			<td> <div><button class="btn btn-outline-primary"(click)="getStockPrice(stock.id,stock.stockTicker,stock.price)">
+			Profit or Loss</button></div> </td>
+		  </tr>
+		</tbody>
+	  </table>
+	</div>
+</div>
