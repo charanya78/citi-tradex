@@ -69,7 +69,7 @@ The project aims to provide an easy to use interface for a user to place buy and
 - This shows the Jenkins pipeline created for our application
 
 ![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/openshift.png)
-- This shows three services hosted on OpenShift - REST API, SQL DATABASE and DUMMY TRADE SERVICE
+- This shows three services hosted on OpenShift - REST API, SQL DATABASE and DUMMY TRADE FILLER SERVICE
 
 ## FEATURES
 
