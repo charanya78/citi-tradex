@@ -46,10 +46,9 @@ The project aims to provide an easy to use interface for a user to place buy and
 - Routes are configured based on controller mappings in app-routing.module.ts 
 
 #### EXTERNAL SERVICES
-- For features like live price service, trade advisor and news, extrernal services hosten on AWS are invoked 
-
-
-
+- For features like live price service, trade advisor and news, extrernal services hosted on AWS are invoked 
+- These are mapped to our applicatiob by using url mappings]
+- These features are explained more in FEATURES section
 
 ## DATABASE STRUCTURE
 
@@ -67,8 +66,10 @@ The project aims to provide an easy to use interface for a user to place buy and
 ## JENKINS AND OPENSHIFT DEPLOYMENT
 
 ![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/jenkins.png)
+- This shows the Jenkins pipeline created for our application
 
 ![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/openshift.png)
+- This shows three services hosted on OpenShift - REST API, SQL DATABASE and DUMMY TRADE SERVICE
 
 ## FEATURES
 
