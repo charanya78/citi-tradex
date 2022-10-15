@@ -92,7 +92,7 @@ The project aims to provide an easy to use interface for a user to place buy and
 ![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/example_feature.png)
 
 - Home page UI
-![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/example_feature.png)
+![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/features.jpg)
 ## EXECUTION 
 
 - REST API can be built as a SpringBootApplication on any IDE after configuring the ports, databases and url mappings. Swagger UI page can be used to check CRUD operations.
