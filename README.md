@@ -66,10 +66,11 @@ The project aims to provide an easy to use interface for a user to place buy and
 ## JENKINS AND OPENSHIFT DEPLOYMENT
 
 ![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/jenkins.png)
-- This shows the Jenkins pipeline created for our application
+- This shows the Jenkins pipeline created for our application where the steps are testing, build, container creation, deploying to openshift
 
 ![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/openshift.png)
-- This shows three services hosted on OpenShift - REST API, SQL DATABASE and DUMMY TRADE FILLER SERVICE
+- This shows three services hosted on OpenShift - REST API, SQL database and Dummy Trade Filler Service
+- Dummy Trade Filler Service is a mock Stock exchange hosted on OpenShift where the user's stock order is recovered and status of the order is sent back.
 
 ## FEATURES
 
