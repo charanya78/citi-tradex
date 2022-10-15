@@ -6,7 +6,7 @@ The project aims to provide an easy to use interface for a user to place buy and
 - Perform Trade Operations -- Buy/Sell/View history
 - Provide Trade suggestions to novice traders
 - Use Trade visualisations to convey better idea of Trade History
-- Create a Real Life Trade Scenario using dummy status fillers.
+- Create a Real Life Trade Scenario using dummy status fillers
 
 ## SOFTWARES AND DEVOP TOOLS USED
 
@@ -46,8 +46,8 @@ The project aims to provide an easy to use interface for a user to place buy and
 - Routes are configured based on controller mappings in app-routing.module.ts 
 
 #### EXTERNAL SERVICES
-- For features like live price service, trade advisor and news, extrernal services hosted on AWS are invoked 
-- These are mapped to our applicatiob by using url mappings]
+- For features like live price service, trade advisor and news, external services hosted on AWS are invoked 
+- These are mapped to our application by using url mappings
 - These features are explained more in FEATURES section
 
 ## DATABASE STRUCTURE
@@ -74,13 +74,26 @@ The project aims to provide an easy to use interface for a user to place buy and
 
 ## FEATURES
 
+- The features added in this investment portfolio are listed in this diagram:
+  - Login page with static login credentials
+  - The home page has all the features that has been developed
+  - The first feature is to place a new order which contacts the dummy trade service for the status
+  - View trading history which has all the stocks bought
+  - Trade advice and trade price which contacts AWS services to print the advice and price
+  - Analytics Dashboard which holds charts and insights
+  - PNL perctange for a stock bought
+  
 ![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/features.PNG)
+
 
 ![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/features2.PNG)
 
+- Example image of a feature where a ticker is chosen which prints the advice as well as the price
 ![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/example_feature.png)
 
+- Home page UI
+![alt text](https://github.com/charanya78/citi-tradex/blob/main/diagrams/example_feature.png)
 ## EXECUTION 
 
-- REST API can be built as a SpringBootApplication on any IDE after configuring the ports, databases and url mappings. Swagger UI page can be used to check CRUD operations
+- REST API can be built as a SpringBootApplication on any IDE after configuring the ports, databases and url mappings. Swagger UI page can be used to check CRUD operations.
 - Angular UI (can be found on the feature branch frontend) can also be built after connecting to the REST API and other external services, ports and url mappings.
